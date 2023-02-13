@@ -81,7 +81,7 @@ const Fetch = async () => {
     await fetchnews(category[i]);
   }
 }
-// await Fetch();
+await Fetch();
 if (rows.length !== 0) {
   await writeAppend('News.csv', fields, rows);
 } else {
