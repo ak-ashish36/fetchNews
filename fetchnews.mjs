@@ -76,6 +76,7 @@ const Fetch = async () => {
 await Fetch();
 if (rows.length !== 0) {
   await writeAppend('IndiaNews.csv', fields, rows);
+  console.log("News Added to IndiaNews.csv")
 } else {
   console.log("No news to add")
 }
