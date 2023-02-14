@@ -10,9 +10,10 @@ let fields = ["title", "text", "subject", "date", "label"];
 let rows = [];
 
 const fetchnews = async (subject) => {
+  let parsedData
   try {
-    let data = await fetch(`https://newsapi.org/v2/top-headlines?country=in&category=${subject}&apiKey=4505aaf4588f4ae094549d614e8701fd&pageSize=100`)
-    let parsedData = await data.json();
+    let data = await fetch(`https://newsapi.org/v2/top-headlines?country=in&category=${subject}&apiKey=a69d759565f04901bb33ff3f4594ab39&pageSize=100`)
+    parsedData = await data.json();
     // data = JSON.stringify(parsedData);
     console.log(parsedData.articles.length)
   }

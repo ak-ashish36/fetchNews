@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "fetch-news": "node fetchnews.mjs"
+    "fetchnews": "node fetchnews.mjs && node fetchAllnews.mjs"
   },
   "author": "",
   "license": "ISC",

@@ -10,7 +10,7 @@ let rows = [];
 let totalResults = 0;
 let currentResults = 0;
 const fetchApi = async (subject, page, articles) => {
-  let data = await fetch(`https://newsapi.org/v2/everything?q=${subject}&sortBy=popularity&apiKey=a69d759565f04901bb33ff3f4594ab39&page=${page}`)
+  let data = await fetch(`https://newsapi.org/v2/everything?q=${subject}&sortBy=popularity&apiKey=263a980ad1c641d89022c4c2db5c4b99&page=${page}`)
   let parsed = await data.json();
   totalResults = parsed.totalResults;
   currentResults += parsed.articles.length;
