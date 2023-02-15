@@ -76,15 +76,15 @@ const Fetch = async () => {
 }
 await Fetch();
 if (rows.length !== 0) {
-  await writeAppend('IndiaNews.csv', fields, rows);
-  console.log("News Added to IndiaNews.csv")
+  await writeAppend('News.csv', fields, rows);
+  console.log("News Added to News.csv")
 } else {
   console.log("No news to add")
 }
 
 const results = [];
 const set = new Set();
-fs.createReadStream('IndiaNews.csv')
+fs.createReadStream('News.csv')
   .pipe(createCsvParser())
   .on('data', (data) => {
     let subject = data.subject;
@@ -98,7 +98,7 @@ fs.createReadStream('IndiaNews.csv')
   })
   .on('end', () => {
     console.log("Removing Duplicates");
-    writeNew('IndiaNews.csv', fields, results);
+    writeNew('News.csv', fields, results);
     console.log("Duplicates Removed");
   })
 
